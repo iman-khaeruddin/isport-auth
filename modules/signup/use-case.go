@@ -26,6 +26,7 @@ func (uc SignUseCase) Signup(ctx context.Context, payload RegisterReq) (dto.Base
 	hashPass, _ := hash.CreateSignature([]byte(payload.Password))
 	user = &entity.User{
 		Email:       payload.Email,
+		PhoneNumber: payload.PhoneNumber,
 		FirstName:   payload.FirstName,
 		LastName:    payload.LastName,
 		Password:    hashPass,
