@@ -1,11 +1,11 @@
 package main
 
 import (
-	middleware "auth/midleware"
-	"auth/modules/signin"
-	"auth/modules/signup"
-	"auth/utils/db"
 	"github.com/gin-gonic/gin"
+	middleware "github.com/iman-khaeruddin/isport-auth/midleware"
+	"github.com/iman-khaeruddin/isport-auth/modules/signin"
+	"github.com/iman-khaeruddin/isport-auth/modules/signup"
+	"github.com/iman-khaeruddin/isport-auth/utils/db"
 	"log"
 	"os"
 )

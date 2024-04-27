@@ -1,12 +1,12 @@
 package hash
 
 import (
-	"auth/entity"
 	"crypto/hmac"
 	"crypto/sha256"
 	"encoding/hex"
 	"fmt"
 	"github.com/golang-jwt/jwt/v5"
+	"github.com/iman-khaeruddin/isport-auth/entity"
 	"log"
 	"os"
 	"time"

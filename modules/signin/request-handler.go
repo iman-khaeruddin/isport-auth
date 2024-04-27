@@ -1,10 +1,10 @@
 package signin
 
 import (
-	"auth/dto"
-	"auth/repository"
-	"auth/utils/validator"
 	"github.com/gin-gonic/gin"
+	"github.com/iman-khaeruddin/isport-auth/dto"
+	"github.com/iman-khaeruddin/isport-auth/repository"
+	"github.com/iman-khaeruddin/isport-auth/utils/validator"
 	"gorm.io/gorm"
 	"net/http"
 	"os"

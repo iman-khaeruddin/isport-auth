@@ -1,10 +1,10 @@
 package signin
 
 import (
-	"auth/dto"
-	"auth/repository"
-	"auth/utils/hash"
 	"context"
+	"github.com/iman-khaeruddin/isport-auth/dto"
+	"github.com/iman-khaeruddin/isport-auth/repository"
+	"github.com/iman-khaeruddin/isport-auth/utils/hash"
 	"gorm.io/gorm"
 )
 

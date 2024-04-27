@@ -1,8 +1,8 @@
 package signup
 
 import (
-	"auth/dto"
 	"context"
+	"github.com/iman-khaeruddin/isport-auth/dto"
 )
 
 type SignController struct {

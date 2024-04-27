@@ -1,11 +1,11 @@
 package signup
 
 import (
-	"auth/dto"
-	"auth/entity"
-	"auth/repository"
-	"auth/utils/hash"
 	"context"
+	"github.com/iman-khaeruddin/isport-auth/dto"
+	"github.com/iman-khaeruddin/isport-auth/entity"
+	"github.com/iman-khaeruddin/isport-auth/repository"
+	"github.com/iman-khaeruddin/isport-auth/utils/hash"
 	"time"
 )
 

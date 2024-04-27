@@ -1,8 +1,8 @@
 package repository
 
 import (
-	"auth/entity"
 	"context"
+	"github.com/iman-khaeruddin/isport-auth/entity"
 	"gorm.io/gorm"
 	"gorm.io/gorm/clause"
 )
