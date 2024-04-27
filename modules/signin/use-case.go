@@ -3,9 +3,11 @@ package signin
 import (
 	"context"
 	"github.com/iman-khaeruddin/isport-auth/dto"
+	"github.com/iman-khaeruddin/isport-auth/entity"
 	"github.com/iman-khaeruddin/isport-auth/repository"
 	"github.com/iman-khaeruddin/isport-auth/utils/hash"
 	"gorm.io/gorm"
+	"time"
 )
 
 type SignUseCase struct {
@@ -38,6 +40,12 @@ func (uc SignUseCase) Signin(ctx context.Context, payload LoginReq) (dto.BaseRes
 	if err != nil {
 		return dto.DefaultErrorBaseResponse(err), err
 	}
+
+	updateLastLogin := &entity.User{
+		ID:        user.ID,
+		LastLogin: time.Now(),
+	}
+	uc.userRepo.UpdateSelectedFields(ctx, updateLastLogin, "LastLogin")
 
 	return dto.BaseResponse{
 		Data:         token,
