@@ -1,4 +1,4 @@
-module auth
+module github.com/iman-khaeruddin/isport-auth
 
 go 1.21.5
 
