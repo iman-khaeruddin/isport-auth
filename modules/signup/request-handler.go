@@ -26,7 +26,8 @@ func (h SignRequestHandler) HandleSignup(router *gin.Engine) {
 	}
 	h.ctrl = SignController{useCase: signupUseCase}
 
-	router.POST("/signup", h.signup)
+	r := router.Group("/auth")
+	r.POST("/signup", h.signup)
 }
 
 func (h SignRequestHandler) signup(c *gin.Context) {

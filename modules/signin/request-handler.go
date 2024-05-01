@@ -26,8 +26,8 @@ func (h SignRequestHandler) HandleSignin(router *gin.Engine) {
 		userRepo: repository.NewUser(h.iSportDB),
 	}
 	h.ctrl = SignController{useCase: signupUseCase}
-
-	router.POST("/signin", gin.BasicAuth(gin.Accounts{os.Getenv("USERNAME"): os.Getenv("PASSWORD")}), h.signin)
+	r := router.Group("/auth")
+	r.POST("/signin", gin.BasicAuth(gin.Accounts{os.Getenv("USERNAME"): os.Getenv("PASSWORD")}), h.signin)
 }
 
 func (h SignRequestHandler) signin(c *gin.Context) {
