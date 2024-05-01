@@ -24,7 +24,7 @@ func main() {
 	signin := signin.NewSignRequestHandler(iSportDB)
 	signin.HandleSignin(router)
 
-	err := router.Run()
+	err := router.Run(":" + os.Getenv("PORT_AUTH"))
 
 	if err != nil {
 		log.Println("main router.Run:", err)
